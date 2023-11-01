@@ -44,7 +44,6 @@ window.onclick= (e)=>{
   }
 
 
- 
-}
-}
 
+}
+}

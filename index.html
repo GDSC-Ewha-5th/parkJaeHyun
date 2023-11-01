@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <script defer src="main1.js"></script>
+  <script defer src="modal.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -45,14 +46,18 @@
       <article>
         <ul>
           <div class = "posting-card">
-            <img id="image" src = "캡처3.PNG">
+            <img id="image" src = "캡처3.PNG"onclick="openModal()">
             <div class = "box">
             <div class = "text-box">
               <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
               <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
           </div>
           </div>
-          </div>
+          <div class="modal" id="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
           <div class = "posting-card">
             <img id="image" src = "캡처3.PNG">
             <div class = "box">
@@ -182,10 +187,19 @@
             </div>
           </div>
         </div>
+        <div id="modal-box">
+          <div id="modal-contents">
+            <button id="close">&times;</button>
+            <img src="캡처3.PNG" alt="이미지">
+          </div>
+  
+        </div>
+        <script defer src="modal.js"></script>
         </ul>
       
       </article>
-    
+      
   </main>
+ 
 </body>
 </html>

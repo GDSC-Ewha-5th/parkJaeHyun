@@ -136,16 +136,40 @@ h1{
   top:-40px;
 }
 
-.date{
-  
-    border: 0.1px solid;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
 .clicked {
   color: gold;
+}
+
+.posting-card {
+  position: relative;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:lightgray;
+  text-align: center;
+  z-index: 1;
+  padding: 100px;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
 }
