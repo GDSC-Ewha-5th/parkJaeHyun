@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script defer src="main1.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/688ec50e73.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <header>
@@ -17,14 +19,171 @@
     <button> <i class="fa-solid fa-user"></i>
     </button>
   </header>
-  <main>
+  <nav>
+    <div class="dropdown-label">
     
+      <span ></span>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">
+        <span class="dropbtn_icon"></span>
+        <span class="dropbtn_content">오늘</span>
+        <span class="dropbtn_click" style="font-family: Material Icons; font-size : 16px; color : #3b3b3b; float:right;"
+          onclick="dropdown()">arrow_drop_down</span>
+      </button>
+      <div class="dropdown-content">
+        <span class="dropdown_click"></span>
+        <div class="date" onclick="showMenu(this.innerText)">오늘</div>
+        <div class="date" onclick="showMenu(this.innerText)">이번주</div>
+        <div class="date" onclick="showMenu(this.innerText)">이번달</div>
+        <div class="date" onclick="showMenu(this.innerText)">올해</div>
+        
+      </div>
+    </div>
+  </nav>
+  <main>
       <article>
         <ul>
-          <li><p id=포스팅1 ></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p></li>
-          <li><p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p></li>
-          <li><p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p> <p id=포스팅1></p></li>
-       </ul>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+          </div>
+          </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+            </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+            </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </ul>
+        <ul>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+          </div>
+        </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+          </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+        </ul>
+        <ul>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+          </div>
+        </div>
+          </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+          </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+          <div class = "posting-card">
+            <img id="image" src = "캡처3.PNG">
+            <div class = "box">
+            <div class = "text-box">
+              <p id="title">프론트엔드 개발자의 끝? V0.dev 사용법</p>
+              <p id="content">프론트엔드 개발자의 일자리를 위협하는 V0의 등장</p>
+            </div>
+          </div>
+        </div>
+        </ul>
+      
       </article>
     
   </main>
