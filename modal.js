@@ -1,7 +1,7 @@
 function openModal() {
   var modal = document.getElementById("modal");
   var modalImage = document.getElementById("modal-image");
-  var image = document.getElementById("image");
+  var image = document.getElementById("modal-image"); //
 
   modal.style.display = "block";
   modalImage.src = image.src;
