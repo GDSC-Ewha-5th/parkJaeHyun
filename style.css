@@ -121,25 +121,22 @@ h1{
   font-size: 12px;
   padding : 12px 20px;
 }
-.dropdown-content div:hover{
-  background-color:lightgrey;
+
+
+.dropdown-content .date:hover {
+  background-color: lightgrey;
 }
 
-.fastfood div :visited{
-  color: blueviolet;
-}
-
-.dropdown-content.show{
-  display : block;
+.dropdown-content.show {
+  display: block;
   position: relative;
-  left:50px;
-  top:-40px;
+  left: 50px;
+  top: -40px;
 }
 
-
-
-.clicked {
-  color: gold;
+.dropdown_click .click {
+  color:aqua;
+  font-weight: bolder;
 }
 
 .posting-card {

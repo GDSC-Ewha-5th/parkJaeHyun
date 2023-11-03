@@ -20,6 +20,7 @@ window.onload=()=>{
 
     dropbtn_icon.innerText = '';
     dropbtn_content.innerText = value;
+    dropbtn_content.classList.contains('clicked');
    
     dropbtn.style.borderColor = '#3992a8';
    
@@ -47,3 +48,16 @@ window.onclick= (e)=>{
 
 }
 }
+
+const dateElements = document.querySelectorAll('.dropdown_click .date');
+
+function select(liEl) {
+  dateElements.forEach((el) => el.classList.remove('click'));
+  liEl.classList.add('click');
+}
+
+dateElements.forEach((dateElement) => {
+  dateElement.addEventListener('click', (e) => {
+    select(e.target);
+  });
+});
