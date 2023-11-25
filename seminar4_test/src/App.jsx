@@ -1,8 +1,8 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faPenNib } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import { useEffect } from 'react';
+
 
 const Header = styled.header`
   display: flex;
@@ -18,6 +18,9 @@ const PostingCard = styled.div`
   padding: 10px;
   background: white;
   box-sizing: border-box; /* padding, border를 포함한 크기 적용 */
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 const MainWrapper = styled.div`
@@ -104,6 +107,39 @@ const CloseButton = styled.button`
   cursor: pointer;
   color : black;
 `;
+
+const Box = styled.div`
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+`;
+
+const Dropdown = styled.ul`
+  display: ${props => (props.isOpen ? 'block' : 'none')};
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 92px;
+  left: 125px;
+  background-color:white;
+  width:220px;
+`;
+const ListItem = styled.li`
+  padding: 8px;
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
+`;
+
+
 function App() {
   const posts = [
     {
@@ -221,8 +257,21 @@ function App() {
       document.body.style.overflow = 'visible';
     };
   }, [showModal]); // showModal 상태에 변화가 있을 때마다 실행
+  
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState('오늘'); 
 
- 
+  const items = ['오늘', '이번주', '이번달','올해'];
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const selectItem = (item) => {
+    setSelectedItem(item); // 선택된 항목으로 상태 업데이트
+    setIsOpen(false);
+  };
   return (
     <>
       <Header>
@@ -253,10 +302,19 @@ function App() {
       <CloseButton onClick={closeModal}>X</CloseButton> {/* X 버튼 추가 */}
     </ModalContent>
   </Modal>
+  
       )}
-      
+      <Box onClick={toggleDropdown}>{selectedItem}</Box>
+
+      <Dropdown isOpen={isOpen}>
+                  {items.map((item, idx) => (
+                    <ListItem key={idx} onClick={() => selectItem(item)}>
+                      {item}
+                    </ListItem>
+                  ))}
+                </Dropdown>   
     </>
   );
 }
 
-export default App;
+export default App; 
